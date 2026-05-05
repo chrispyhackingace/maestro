@@ -1,0 +1,61 @@
+.app-container {
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.app-header {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 30px;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+.app-header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.app-header p {
+  font-size: 1.1rem;
+  margin: 10px 0 0 0;
+  color: #666666;
+  font-weight: 400;
+}
+
+.app-main {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
