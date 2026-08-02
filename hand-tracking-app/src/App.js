@@ -1,18 +1,12 @@
-import React from 'react';
-import './App.css';
-import HandTracker from './components/HandTracker';
+import ConductingCoach from "./components/ConductingCoach";
 
-const App = () => {
+export default function App() {
   return (
-    <div className="app-container">
+    <div className="app">
       <header className="app-header">
-        <h1>throwing hands</h1>
       </header>
-      <main className="app-main">
-        <HandTracker />
-      </main>
+
+      <ConductingCoach />
     </div>
   );
-};
-
-export default App;
+}

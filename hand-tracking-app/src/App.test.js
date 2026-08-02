@@ -1,8 +1,11 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
+test("renders the full-page conducting workspace", () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByLabelText(/orchestra section cueing area/i)).toBeInTheDocument();
+  expect(screen.getAllByText("Strings").length).toBeGreaterThan(0);
+  expect(screen.getAllByText("Woodwinds").length).toBeGreaterThan(0);
+  expect(screen.getByRole("button", { name: /start camera/i })).toBeInTheDocument();
+  expect(screen.getByRole("button", { name: /settings/i })).toBeInTheDocument();
 });
